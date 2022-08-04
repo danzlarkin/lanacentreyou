@@ -29,7 +29,7 @@ waitForElement('form[data-form-id="62eb459e90cabb2256fb4656"]').then(form => {
   const price = form.querySelector('input[name="SQF_PRICE"]');
   
   // Select the payment term field
-  const paymentTerm = form.querySelectory('input[name="SQF_PAYMENT_TERM"]');
+  const paymentTerm = form.querySelector('input[name="SQF_PAYMENT_TERM"]');
 
   // Define the default redirect url
   const url = form.getAttribute('data-success-redirect');
