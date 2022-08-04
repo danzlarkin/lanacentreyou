@@ -24,6 +24,12 @@ waitForElement('form[data-form-id="62eb459e90cabb2256fb4656"]').then(form => {
 
   // Select the email field
   const email = form.querySelector('input[name="email"]');
+  
+  // Select the price field
+  const price = form.querySelector('input[name="SQF_PRICE"]');
+  
+  // Select the payment term field
+  const paymentTerm = form.querySelectory('input[name="SQF_PAYMENT_TERM"]');
 
   // Define the default redirect url
   const url = form.getAttribute('data-success-redirect');
@@ -32,6 +38,6 @@ waitForElement('form[data-form-id="62eb459e90cabb2256fb4656"]').then(form => {
   email.addEventListener('input', () => {
 
     // Update the url
-    form.setAttribute('data-success-redirect', url + '?email=' + email.value);
-   });
+    form.setAttribute('data-success-redirect', url + '?email=' + email.value + '&payment_term' + paymentTerm.value + '&price=' + price.value);
+  });
 });
