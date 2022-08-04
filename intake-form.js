@@ -36,8 +36,15 @@ waitForElement('form[data-form-id="62eb459e90cabb2256fb4656"]').then(form => {
 
   // Handle the email change
   email.addEventListener('input', () => {
+    
+    // Define the data
+    const payload = {
+      email: email.value,
+      price: form.querySelector('input[name="SQF_PRICE"]').value,
+      payment_term: form.querySelector('input[name="SQF_PAYMENT_TERM"]').value
+    });
 
     // Update the url
-    form.setAttribute('data-success-redirect', url + '?email=' + email.value + '&payment_term' + paymentTerm.value + '&price=' + price.value);
+    form.setAttribute('data-success-redirect', url + '?token=' + btoa(JSON.stringify(payload)));
   });
 });
