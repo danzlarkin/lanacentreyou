@@ -1,3 +1,4 @@
+// Wait for the elements to load
 function waitForElement(selector) {
   return new Promise(resolve => {
     if (document.querySelector(selector)) {
@@ -19,14 +20,10 @@ function waitForElement(selector) {
 }
 
 // Select the form
-waitForElement('.form-wrapper').then(form => {
-
-  console.log('form', form)
+waitForElement('form[data-form-id="62eb459e90cabb2256fb4656"]').then(form => {
 
   // Select the email field
   const email = form.querySelector('input[name="email"]');
-
-  console.log(email)
 
   // Define the default redirect url
   const url = form.getAttribute('data-success-redirect');
