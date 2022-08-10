@@ -19,11 +19,11 @@ function waitForElement(selector) {
   });
 }
 
+// Set the top meessage
+document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p').innerText = 'Your invoice has been successfully sent';
+
 // Select the form
 waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
-  
-  // Hide the message
-  document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p').style.opacity = '0 !important';
 
   // Select the email field
   const email = form.querySelector('input[name="email"]');
@@ -52,14 +52,4 @@ waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
   
   // Copy the link to clipboard
   navigator.clipboard.writeText(url);
-  
-  console.log(url);
-
-  // Handle the email change
-//   email.addEventListener('input', () => {
-    
-
-    // Update the url
-   // form.setAttribute('data-success-redirect', url + '?token=' + btoa(JSON.stringify(payload)));
-  //});
 });
