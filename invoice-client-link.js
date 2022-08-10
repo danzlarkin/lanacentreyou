@@ -19,8 +19,13 @@ function waitForElement(selector) {
   });
 }
 
-// Set the top meessage
-document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p').innerText = 'Your invoice has been sent successfully to your client';
+// Select the  content block
+const content = document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p');
+
+// Update the message
+content.innerText = 'Your invoice has been sent successfully to your client';
+
+// Create a 
 
 // Select the form
 waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
