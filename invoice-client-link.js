@@ -42,7 +42,7 @@ waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
   const url = 'https://calendly.com/centreyou/nlp-60/?' + new URLSearchParams(payload).toString();
   
   // Select the link field
-  const link = form.querySelector('#booking-link');
+  const link = document.querySelector('#booking-link');
 
   // Update the text
   link.innerText = url;
