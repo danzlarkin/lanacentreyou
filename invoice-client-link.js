@@ -29,7 +29,7 @@ waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
   const first_name = form.querySelector('input[name="fname"]');
   
   // Select the lastname term field
-  const last_name = form.querySelector('input[name="lname"]');|
+  const last_name = form.querySelector('input[name="lname"]');
 
   // Define the data
   const payload = {
