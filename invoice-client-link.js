@@ -52,4 +52,8 @@ waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
   
   // Copy the link to clipboard
   navigator.clipboard.writeText(url);
+  
+  // Add a click listener
+  link.addEventListener('touchstart', () => navigator.clipboard.writeText(url));
+  link.addEventListener('mousedown', () => navigator.clipboard.writeText(url));
 });
