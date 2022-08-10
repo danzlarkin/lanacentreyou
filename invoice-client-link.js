@@ -23,7 +23,7 @@ function waitForElement(selector) {
 waitForElement('form[data-form-id="62ea3642ef789649e367e1cb"]').then(form => {
   
   // Hide the message
-  document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p').style.display = 'none';
+  document.querySelector('.fe-block.fe-block-946c7f8bb4d58bd02aea p').style.opacity = '0 !important';
 
   // Select the email field
   const email = form.querySelector('input[name="email"]');
